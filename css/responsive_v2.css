@@ -494,7 +494,7 @@
     }
     .banner-section .active .slide-item .image-layer {
         background-size: cover;
-        background-image: url(../images/hero_v2.jpg);
+        background-image: url(../images/hero_v2.webp);
         background-position: center right;
     }
     .banner-section .slide-item .content-box {

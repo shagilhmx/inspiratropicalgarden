@@ -1853,14 +1853,6 @@ img {
 }
 
 
-/* .banner-section .active .slide-item .image-layer {
-    -webkit-transform: scale(1.0);
-    -ms-transform: scale(1.0);
-    transform: scale(1.0);
-    background: url(../images/hero_v3.jpg) no-repeat center left;
-    background-size: cover;
-} */
-
 .banner-section .slide-item .content-box {
     position: relative;
     height: 600px;
@@ -2874,7 +2866,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../images/icons/pattern-1.jpg);
+    background-image: url(../images/icons/pattern-1.webp);
     content: "";
     opacity: 0.05;
 }
@@ -3301,7 +3293,7 @@ img {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../images/call_request.jpg);
+    background-image: url(../images/call_request.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

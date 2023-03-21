@@ -492,11 +492,6 @@
         text-align: center;
         padding-left: 0;
     }
-    /* .banner-section .active .slide-item .image-layer {
-        background-size: cover;
-        background-image: url(../images/hero_v3.jpg);
-        background-position: center right;
-    } */
     .banner-section .slide-item .content-box {
         height: 170px;
     }

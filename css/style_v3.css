@@ -1856,7 +1856,7 @@ img {
     /* -webkit-transform: scale(1.0);
     -ms-transform: scale(1.0);
     transform: scale(1.0); */
-    background: url(../images/hero_v2.jpg) no-repeat center right;
+    background: url(../images/hero_v2.webp) no-repeat center right;
 }
 
 .banner-section .slide-item .content-box {
@@ -2871,7 +2871,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../images/icons/pattern-1.jpg);
+    background-image: url(../images/icons/pattern-1.webp);
     content: "";
     opacity: 0.05;
 }
@@ -3298,7 +3298,7 @@ img {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../images/call_request.jpg);
+    background-image: url(../images/call_request.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
