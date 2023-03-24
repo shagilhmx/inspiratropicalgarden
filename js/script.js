@@ -276,7 +276,10 @@
       }
 
       if ($(this).next(".acc-content").is(":visible")) {
-        return false;
+        $(this).removeClass("active");
+        $(outerBox).children(".accordion").addClass("active-block");
+        $(outerBox).find(".accordion").children(".acc-content").slideUp(300);
+        target.removeClass("active-block");
       } else {
         $(this).addClass("active");
         $(outerBox).children(".accordion").removeClass("active-block");

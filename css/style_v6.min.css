@@ -5990,3 +5990,15 @@ input[type=number]::-webkit-outer-spin-button {
 .modal-backdrop {
     display: none
 }
+
+@media (max-width: 768px) {
+    .about-section-two .content-column .text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .about-section-two .content-column .text p {
+        font-size: 12px;
+    }
+}

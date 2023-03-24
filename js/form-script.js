@@ -53,16 +53,16 @@ jQuery(
       var form = $(this);
 
       function fail_func(response) {
-        // $(".downloadBFPStatus").fadeIn();
+        $(".downloadBFPStatus").fadeIn();
         $(".downloadBFPStatus").html(
           '<div class="alert alert-success"><strong>Thank you for Submitting your Details. Your Brochure & Floor Plan are ready to Download</strong></div>',
         );
         setTimeout(function () {
-          //$(".downloadBFPForm").trigger("reset");
+          $(".downloadBFPForm").trigger("reset");
         }, 4000);
         setTimeout(function () {
           $(".downloadBFPStatus").fadeOut();
-          // location.reload();
+          location.reload();
           $("#downloadBFP").addClass("d-none");
           $("#downloadBFPSuccess").removeClass("d-none");
           $("#DownloadFormModalTitle").html("files are ready to download");
