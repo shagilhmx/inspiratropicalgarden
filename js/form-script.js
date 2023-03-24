@@ -34,14 +34,69 @@ jQuery(
           location.reload();
         }, 4000);
       }
-      console.log(form);
+
+      let [name, email, phone] = form.serializeArray();
+      let body = {},
+        utm_source,
+        utm_campaign,
+        utm_content,
+        utm_medium,
+        utm_terms;
+
+      let emailRegex =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if (
+        email?.value &&
+        email?.value?.match(emailRegex) &&
+        name?.value &&
+        phone?.value
+      ) {
+        let url = window.location.href;
+        let searchParams = new URLSearchParams(new URL(url).search);
+
+        utm_source = searchParams.get("utm_source");
+        utm_campaign = searchParams.get("utm_campaign");
+        utm_medium = searchParams.get("utm_medium");
+        utm_content = searchParams.get("utm_content");
+        utm_terms = searchParams.get("utm_terms");
+
+        const check =
+          utm_campaign || utm_source || utm_content || utm_medium || utm_terms;
+
+        let metaData = {
+          utm_campaign: utm_campaign,
+          utm_content: utm_content,
+          utm_medium: utm_medium,
+          utm_source: utm_source,
+          utm_terms: utm_terms,
+        };
+
+        body = {
+          phone: phone?.value,
+          name: name?.value,
+          projectId: 24,
+          ...(utm_campaign != null && { campaignCode: utm_campaign }),
+          email: email?.value,
+          ...(check && {
+            metaData: {
+              utm_campaign: utm_campaign,
+              utm_content: utm_content,
+              utm_medium: utm_medium,
+              utm_source: utm_source,
+              utm_terms: utm_terms,
+            },
+          }),
+        };
+      }
+
       $.ajax({
-        url: "https://api-dcrm.fincity.com/open/opportunity",
+        url: "http://api-dcrm-stage.fincity.in/open/opportunity",
         method: form.attr("method"),
-        data: form.serialize(),
+        data: JSON.stringify(body),
+        contentType: "application/json",
       })
-        .done(done_func)
-        .fail(fail_func);
+        .done(fail_func)
+        .fail(done_func);
       return false;
     });
 
@@ -81,13 +136,67 @@ jQuery(
           location.reload();
         }, 4000);
       }
+      let [name, email, phone] = form.serializeArray();
+      let body = {},
+        utm_source,
+        utm_campaign,
+        utm_content,
+        utm_medium,
+        utm_terms;
+
+      let emailRegex =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if (
+        email?.value &&
+        email?.value?.match(emailRegex) &&
+        name?.value &&
+        phone?.value
+      ) {
+        let url = window.location.href;
+        let searchParams = new URLSearchParams(new URL(url).search);
+
+        utm_source = searchParams.get("utm_source");
+        utm_campaign = searchParams.get("utm_campaign");
+        utm_medium = searchParams.get("utm_medium");
+        utm_content = searchParams.get("utm_content");
+        utm_terms = searchParams.get("utm_terms");
+
+        const check =
+          utm_campaign || utm_source || utm_content || utm_medium || utm_terms;
+
+        let metaData = {
+          utm_campaign: utm_campaign,
+          utm_content: utm_content,
+          utm_medium: utm_medium,
+          utm_source: utm_source,
+          utm_terms: utm_terms,
+        };
+
+        body = {
+          phone: phone?.value,
+          name: name?.value,
+          projectId: 24,
+          ...(utm_campaign != null && { campaignCode: utm_campaign }),
+          email: email?.value,
+          ...(check && {
+            metaData: {
+              utm_campaign: utm_campaign,
+              utm_content: utm_content,
+              utm_medium: utm_medium,
+              utm_source: utm_source,
+              utm_terms: utm_terms,
+            },
+          }),
+        };
+      }
       $.ajax({
-        url: "https://api-dcrm.fincity.com/open/opportunity",
-        method: form.attr("method"),
-        data: form.serialize(),
+        url: "http://api-dcrm-stage.fincity.in/open/opportunity",
+        method: "POST",
+        data: JSON.stringify(body),
+        contentType: "application/json",
       })
-        .done(done_func)
-        .fail(fail_func);
+        .done(fail_func)
+        .fail(done_func);
       return false;
     });
   })(jQuery),
