@@ -74,6 +74,20 @@
     align-items: center;
 }
 
+.banner-section .banner1 {
+    display: none;
+}
+
+@media(max-width: 767px) {
+    .banner-section .banner1 {
+        display: block !important;
+    }
+
+    .banner-section .banner {
+        display: none;
+    }
+}
+
 @media(max-width: 360px) {
     .thankyou p {
         font-size: 26px;
