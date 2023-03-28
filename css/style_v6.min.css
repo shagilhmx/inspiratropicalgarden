@@ -474,7 +474,7 @@ figure {
     background-color: #fff;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(https://inspiratropicalgarden.com/images/icons/preloader.svg)
+    background-image: url(../images/icons/preloader.svg);
 }
 
 img {
@@ -1066,60 +1066,73 @@ img {
     position: fixed;
     visibility: hidden;
     opacity: 0;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;
     width: 100%;
-    padding: 0 0;
+    padding: 0px 0px;
     z-index: -1;
-    background: #fff;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    -ms-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    -o-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    -webkit-transition: top .3s ease;
-    -moz-transition: top .3s ease;
-    -ms-transition: top .3s ease;
-    -o-transition: top .3s ease;
-    transition: top .3s ease
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+    -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+    -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+    -webkit-transition: top 300ms ease;
+    -moz-transition: top 300ms ease;
+    -ms-transition: top 300ms ease;
+    -o-transition: top 300ms ease;
+    transition: top 300ms ease;
+}
+
+.fixed-header .sticky-header {
+    opacity: 1;
+    z-index: 99999;
+    visibility: visible;
+}
+
+.fixed-header .sticky-header .logo {
+    padding: 10px 0;
 }
 
 .sticky-header .main-menu {
     background-color: transparent;
-    margin-left: 0
+    margin-left: 0;
 }
 
 .sticky-header .main-menu .navigation>li {
     margin-left: 25px !important;
     padding: 0 !important;
     margin-right: 0;
-    background-color: transparent
+    background-color: transparent;
 }
 
-.header-style-two .auto-container:before,
-.sticky-header .main-menu .navigation>li:before,
 .sticky-header .main-menu:after,
-.sticky-header .main-menu:before {
-    display: none
+.sticky-header .main-menu:before,
+.header-style-two .auto-container:before,
+.sticky-header .main-menu .navigation>li.dropdown>a:after,
+.sticky-header .main-menu .navigation>li:before {
+    display: none;
 }
 
 .sticky-header .main-menu .navigation>li>a {
-    padding: 20px 0 !important;
+    padding: 20px 0px !important;
     line-height: 40px;
     font-size: 12px;
     font-weight: 500;
-    color: #222;
+    color: #222222;
     text-transform: capitalize;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
 }
 
-.sticky-header .main-menu .navigation>li:hover>a {
+.sticky-header .main-menu .navigation>li:hover>a,
+.sticky-header .main-menu .navigation>li.current>a,
+.sticky-header .main-menu .navigation>li.current-menu-item>a {
     opacity: 1;
-    color: #17423b
+    color: #17423B;
 }
 
 .nav-outer .mobile-nav-toggler {
@@ -2208,7 +2221,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(https://inspiratropicalgarden.com/images/icons/pattern-1.webp);
+    background-image: url(../images/icons/pattern-1.webp);
     content: "";
     opacity: .05
 }
@@ -2393,7 +2406,7 @@ img {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: url(https://inspiratropicalgarden.com/images/call_request.webp);
+    background-image: url(../images/call_request.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
