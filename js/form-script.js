@@ -90,7 +90,7 @@ jQuery(
       }
 
       $.ajax({
-        url: "http://api-dcrm-stage.fincity.in/open/opportunity",
+        url: "https://api-dcrm.fincity.com/open/opportunity",
         method: form.attr("method"),
         data: JSON.stringify(body),
         contentType: "application/json",
@@ -190,7 +190,7 @@ jQuery(
         };
       }
       $.ajax({
-        url: "http://api-dcrm-stage.fincity.in/open/opportunity",
+        url: "https://api-dcrm.fincity.com/open/opportunity",
         method: "POST",
         data: JSON.stringify(body),
         contentType: "application/json",
