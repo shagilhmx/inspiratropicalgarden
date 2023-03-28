@@ -57,7 +57,7 @@
 .ui-menu .ui-menu-item {
     margin: 0;
     cursor: pointer;
-    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+    list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 }
 
 .ui-menu .ui-menu-item-wrapper {
@@ -240,16 +240,16 @@ a.ui-button:active {
 
 .ui-icon,
 .ui-widget-content .ui-icon {
-    background-image: url(https://inspiratropicalgarden.com/css/https://inspiratropicalgarden.com/css/images/ui-icons_444444_256x240.webp)
+    background-image: url("images/ui-icons_444444_256x240.png");
 }
 
 .ui-widget-header .ui-icon {
-    background-image: url(images/ui-icons_444444_256x240.webp)
+    background-image: url("images/ui-icons_444444_256x240.png");
 }
 
-.ui-button:focus .ui-icon,
-.ui-button:hover .ui-icon {
-    background-image: url(https://inspiratropicalgarden.com/css/images/ui-icons_555555_256x240.webp)
+.ui-button:hover .ui-icon,
+.ui-button:focus .ui-icon {
+    background-image: url("images/ui-icons_555555_256x240.png");
 }
 
 .ui-icon-blank {

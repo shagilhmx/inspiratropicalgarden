@@ -11,6 +11,7 @@
     min-height: 1px;
     float: left;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none
 }
@@ -18,7 +19,8 @@
 .owl-carousel .owl-item img {
     display: block;
     width: 100%;
-    -webkit-transform-style: preserve-3d
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .owl-carousel.owl-loaded {
@@ -97,10 +99,11 @@
     top: 50%;
     margin-left: -40px;
     margin-top: -40px;
-    background: url(https://inspiratropicalgarden.com/css/owl.video.play.html) no-repeat;
+    background: url("owl.video.play.html") no-repeat;
     cursor: pointer;
     z-index: 1;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     transition: -webkit-transform .1s ease;
     transition: transform .1s ease
 }

@@ -43,6 +43,11 @@
     display: none
 }
 
+.firstCapital {
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+
 @media (max-width:767px) {
     .banner-section .banner1 {
         display: block !important
