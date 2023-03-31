@@ -1401,7 +1401,7 @@
                       <span id="numberText"
                         >Please Enter the Verification Code sent to</span
                       >
-                      <span class="changeLink" onclick="backMain(event)"
+                      <span class="changeLink" onclick="backMain(event, true)"
                         >Change</span
                       >
                     </div>
@@ -1572,10 +1572,16 @@
                       <div class="request-form">
                         <div class="sec-title">
                           <!-- <span class="title">villa plan</span> -->
-                          <h2 class="text-white">Enquiry Now</h2>
+                          <h2
+                            class="text-white text-center"
+                            id="bookSiteVisitFormTitle"
+                          >
+                            Enquiry Now
+                          </h2>
                         </div>
                         <form
                           name="bookSiteVisitForm"
+                          id="bookSiteVisitForm"
                           class="bookSiteVisitForm"
                           action="javascript:void(0);"
                           method="POST"
@@ -1631,6 +1637,151 @@
                             </div>
                           </div>
                         </form>
+                        <form
+                          class="downloadBFPForm"
+                          id="otpVerification"
+                          onsubmit="return false"
+                        >
+                          <div
+                            class="d-flex flex-column justify-content-center align-items-center"
+                          >
+                            <div class="resendText py-3 text-light">
+                              <span id="numberText"
+                                >Please Enter the Verification Code sent
+                                to</span
+                              >
+                              <span
+                                class="changeLink"
+                                onclick="backMain(event, false)"
+                                >Change</span
+                              >
+                            </div>
+                            <div
+                              class="py-3 w-100 d-flex justify-content-center"
+                            >
+                              <div class="row">
+                                <div class="px-2">
+                                  <input
+                                    class="otpInput"
+                                    maxlength="1"
+                                    id="_1st"
+                                    onkeyup="clickEvent(this, '_2nd')"
+                                    type="text"
+                                    onkeydown="moveFocusBack(event)"
+                                  />
+                                </div>
+                                <div class="px-2">
+                                  <input
+                                    class="otpInput"
+                                    maxlength="1"
+                                    id="_2nd"
+                                    onkeyup="clickEvent(this, '_3rd')"
+                                    type="text"
+                                    onkeydown="moveFocusBack(event, '_1st')"
+                                  />
+                                </div>
+                                <div class="px-2">
+                                  <input
+                                    class="otpInput"
+                                    maxlength="1"
+                                    id="_3rd"
+                                    type="text"
+                                    onkeyup="clickEvent(this, '_4th')"
+                                    onkeydown="moveFocusBack(event, '_2nd')"
+                                  />
+                                </div>
+                                <div class="px-2">
+                                  <input
+                                    class="otpInput"
+                                    maxlength="1"
+                                    id="_4th"
+                                    type="text"
+                                    onkeydown="moveFocusBack(event, '_3rd')"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="boxWrapper py-3 text-center">
+                              <p class="text-light">Don't receive OTP?</p>
+                              <p
+                                onclick="resendOtp(event)"
+                                id="resendOtp"
+                                class="text-light"
+                              >
+                                Resend OTP
+                              </p>
+                            </div>
+                            <div class="py-3 form-group">
+                              <button
+                                class="theme-btn btn-style-one"
+                                id="otpBbutton1"
+                                type="submit"
+                                onclick="verfiyOtp(event)"
+                              >
+                                Verify
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                        <div
+                          class="downloadBFPForm"
+                          id="location"
+                          onsubmit="return false"
+                        >
+                          <div
+                            class="d-flex flex-column justify-content-center align-items-center"
+                          >
+                            <div class="headerModal">
+                              <lottie-player
+                                title="marker"
+                                background="transparent"
+                                src="images/marker-lottie.json"
+                                speed="1"
+                                style="width: 150px; height: 150px"
+                                autoplay
+                                loop
+                              ></lottie-player>
+                            </div>
+                            <div class="consentText">
+                              <p class="ThankYou text-light">Thank You!</p>
+                              <p id="serveBetter">To Serve you better</p>
+                              <p class="shareLocation">
+                                Please Share your Location
+                              </p>
+                            </div>
+                            <div class="py-3 form-group">
+                              <button
+                                class="theme-btn btn-style-one d-flex justify-content-center align-items-center"
+                                id="locationButton"
+                                type="submit"
+                                onclick="detectLocation(event)"
+                              >
+                                <p
+                                  class="detectText text-light"
+                                  id="detectText"
+                                >
+                                  Detect My Location
+                                </p>
+                                <img
+                                  src="images/focus.svg"
+                                  alt="located"
+                                  class="detect pl-1"
+                                  id="detect"
+                                />
+                                <lottie-player
+                                  class="loading"
+                                  id="loading"
+                                  src="images/loading.json"
+                                  background="transparent"
+                                  speed="1"
+                                  autoplay
+                                  loop
+                                  style="width: 50px; height: 50px"
+                                ></lottie-player>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
