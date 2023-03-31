@@ -1401,7 +1401,7 @@
                       <span id="numberText"
                         >Please Enter the Verification Code sent to</span
                       >
-                      <span class="changeLink" onclick="backMain(event, true)"
+                      <span class="changeLink" onclick="backMain(event)"
                         >Change</span
                       >
                     </div>
@@ -1424,7 +1424,7 @@
                             id="_2nd"
                             onkeyup="clickEvent(this, '_3rd')"
                             type="text"
-                            onkeydown="moveFocusBack(event)"
+                            onkeydown="moveFocusBack(event, '_1st')"
                           />
                         </div>
                         <div class="px-2">
@@ -1434,7 +1434,7 @@
                             id="_3rd"
                             type="text"
                             onkeyup="clickEvent(this, '_4th')"
-                            onkeydown="moveFocusBack(event)"
+                            onkeydown="moveFocusBack(event, '_2nd')"
                           />
                         </div>
                         <div class="px-2">
@@ -1443,14 +1443,14 @@
                             maxlength="1"
                             id="_4th"
                             type="text"
-                            onkeydown="moveFocusBack(event)"
+                            onkeydown="moveFocusBack(event, '_3rd')"
                           />
                         </div>
                       </div>
                     </div>
                     <div class="boxWrapper py-3 text-center">
                       <p>Don't receive OTP?</p>
-                      <p onclick="resendOtp(event, true)" id="resendOtp">
+                      <p onclick="resendOtp(event)" id="resendOtp">
                         Resend OTP
                       </p>
                     </div>
@@ -1459,7 +1459,7 @@
                         class="theme-btn btn-style-one"
                         id="otpBbutton1"
                         type="submit"
-                        onclick="verfiyOtp(event, true)"
+                        onclick="verfiyOtp(event)"
                       >
                         Verify
                       </button>
@@ -1495,7 +1495,7 @@
                         class="theme-btn btn-style-one d-flex justify-content-center align-items-center"
                         id="locationButton"
                         type="submit"
-                        onclick="detectLocation(event, true)"
+                        onclick="detectLocation(event)"
                       >
                         <p class="detectText text-white" id="detectText">
                           Detect My Location
