@@ -2,6 +2,79 @@
     display: none;
 }
 
+.otpBbutton:disabled,
+.location button:disabled {
+    cursor: not-allowed !important;
+    background-color: #919191 !important;
+    color: rgba(239, 239, 239, 0.747);
+}
+
+.resendText {
+    font-size: 16px;
+}
+
+.changeLink {
+    color: #298EC7;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.changeLink:hover {
+    font-weight: 700;
+}
+
+#location .ThankYou {
+    font-size: 24px;
+}
+
+#location .consentText {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.loading {
+    display: none;
+}
+
+#location p {
+    margin: 0px;
+}
+
+#location {
+    display: none;
+}
+
+#location button img {
+    width: 20px;
+}
+
+#otpVerification {
+    display: none;
+}
+
+#otpVerification .boxWrapper p:last-of-type {
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#otpVerification .boxWrapper p:last-of-type:hover {
+    font-weight: 700;
+}
+
+.otpInput {
+    background-color: white;
+    color: black;
+    border: 1px solid #00000029;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .phoneCall {
         background-color: #de9e53;

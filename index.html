@@ -1336,6 +1336,7 @@
               <div class="request-form pt-4" id="downloadBFP">
                 <form
                   name="downloadBFPForm"
+                  id="downloadBFPForm"
                   class="downloadBFPForm"
                   action="javascript:void(0);"
                   method="POST"
@@ -1388,6 +1389,137 @@
                     </div>
                   </div>
                 </form>
+                <form
+                  class="downloadBFPForm"
+                  id="otpVerification"
+                  onsubmit="return false"
+                >
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <div class="resendText py-3">
+                      <span id="numberText"
+                        >Please Enter the Verification Code sent to</span
+                      >
+                      <span class="changeLink" onclick="backMain(event, true)"
+                        >Change</span
+                      >
+                    </div>
+                    <div class="py-3 w-100 d-flex justify-content-center">
+                      <div class="row">
+                        <div class="px-2">
+                          <input
+                            class="otpInput"
+                            maxlength="1"
+                            id="_1st"
+                            onkeyup="clickEvent(this, '_2nd')"
+                            type="text"
+                            onkeydown="moveFocusBack(event)"
+                          />
+                        </div>
+                        <div class="px-2">
+                          <input
+                            class="otpInput"
+                            maxlength="1"
+                            id="_2nd"
+                            onkeyup="clickEvent(this, '_3rd')"
+                            type="text"
+                            onkeydown="moveFocusBack(event)"
+                          />
+                        </div>
+                        <div class="px-2">
+                          <input
+                            class="otpInput"
+                            maxlength="1"
+                            id="_3rd"
+                            type="text"
+                            onkeyup="clickEvent(this, '_4th')"
+                            onkeydown="moveFocusBack(event)"
+                          />
+                        </div>
+                        <div class="px-2">
+                          <input
+                            class="otpInput"
+                            maxlength="1"
+                            id="_4th"
+                            type="text"
+                            onkeydown="moveFocusBack(event)"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="boxWrapper py-3 text-center">
+                      <p>Don't receive OTP?</p>
+                      <p onclick="resendOtp(event, true)" id="resendOtp">
+                        Resend OTP
+                      </p>
+                    </div>
+                    <div class="py-3 form-group">
+                      <button
+                        class="theme-btn btn-style-one"
+                        id="otpBbutton1"
+                        type="submit"
+                        onclick="verfiyOtp(event, true)"
+                      >
+                        Verify
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div
+                  class="downloadBFPForm"
+                  id="location"
+                  onsubmit="return false"
+                >
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <div class="headerModal">
+                      <lottie-player
+                        title="marker"
+                        background="transparent"
+                        src="images/marker-lottie.json"
+                        speed="1"
+                        style="width: 150px; height: 150px"
+                        autoplay
+                        loop
+                      ></lottie-player>
+                    </div>
+                    <div class="consentText">
+                      <p class="ThankYou">Thank You!</p>
+                      <p id="serveBetter">To Serve you better</p>
+                      <p class="shareLocation">Please Share your Location</p>
+                    </div>
+                    <div class="py-3 form-group">
+                      <button
+                        class="theme-btn btn-style-one d-flex justify-content-center align-items-center"
+                        id="locationButton"
+                        type="submit"
+                        onclick="detectLocation(event, true)"
+                      >
+                        <p class="detectText text-white" id="detectText">
+                          Detect My Location
+                        </p>
+                        <img
+                          src="images/focus.svg"
+                          alt="located"
+                          class="detect pl-1"
+                          id="detect"
+                        />
+                        <lottie-player
+                          class="loading"
+                          id="loading"
+                          src="images/loading.json"
+                          background="transparent"
+                          speed="1"
+                          autoplay
+                          loop
+                          style="width: 50px; height: 50px"
+                        ></lottie-player>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div id="downloadBFPSuccess" class="d-none">
                 <div class="row">
@@ -1537,6 +1669,11 @@
     <script defer src="js/scrollbar.min.js"></script>
     <script defer src="js/script.min.js"></script>
     <script defer src="js/form-script.min.js"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
     <script defer src="js/main.min.js"></script>
 
     <script defer>
