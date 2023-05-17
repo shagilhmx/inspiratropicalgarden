@@ -3,8 +3,6 @@
   <head>
     <!-- Page Title -->
     <title>Inspira Tropical Garden</title>
-    <meta http-equiv="refresh" content="0; URL=https://inspiratropicalgarden.com/">
-
     <!-- Page Title End -->
 
     <!-- Meta, Title & OG Details -->
@@ -80,6 +78,12 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.12/build/css/intlTelInput.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.12/build/js/intlTelInput.min.js"></script>
+
     <!-- Google Fonts End-->
 
     <!-- Google tag (gtag.js) -->
@@ -96,7 +100,21 @@
 
       gtag("config", "AW-10852030635");
     </script>
-    <!-- Google tag (gtag.js) -->
+
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "gh6uuajbpi");
+    </script>
 
     <!-- Stylesheets -->
     <link href="css//bootstrap.min.css" rel="preload" as="style" />
@@ -106,7 +124,7 @@
     <link href="css/flaticon.min.css" rel="preload" as="style" />
     <link href="css/owl.min.css" rel="preload" as="style" />
     <link href="css/jquery-ui.min.css" rel="preload" as="style" />
-    <link href="css/jquery.fancybox.min.css" rel="preload" as="style" />
+    <!-- <link href="css/jquery.fancybox.min.css" rel="preload" as="style" /> -->
     <link href="css/style_v6.min.css" rel="preload" as="style" />
     <link href="css/responsive_v5.min.css" rel="preload" as="style" />
     <link href="css/main.min.css" rel="preload" as="style" />
@@ -115,7 +133,19 @@
     <link href="css/flaticon.min.css" rel="stylesheet" />
     <link href="css/owl.min.css" rel="stylesheet" />
     <link href="css/jquery-ui.min.css" rel="stylesheet" />
-    <link href="css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <style>
+      .fancybox__slide.has-caption {
+        flex-direction: row;
+      }
+
+      .fancybox__content {
+        max-height: 600px;
+      }
+    </style>
     <link href="css/style_v6.min.css" rel="stylesheet" />
     <link href="css/responsive_v5.min.css" rel="stylesheet" />
     <link href="css/main.min.css" rel="stylesheet" />
@@ -127,7 +157,11 @@
       <!-- <div class="preloader"></div> -->
 
       <!-- Header Style Two -->
-      <header class="main-header header-style-two" id="Home">
+      <header
+        style="background-color: #fff"
+        class="main-header header-style-two"
+        id="Home"
+      >
         <!-- Header Top -->
         <div class="header-top">
           <div class="auto-container">
@@ -154,10 +188,13 @@
         </div>
 
         <!-- Header Upper -->
-        <div class="header-upper">
+        <div
+          class="header-upper"
+          style="position: fixed; width: 100%; background-color: #fff"
+        >
           <div class="auto-container">
             <div class="inner-container clearfix">
-              <span class="bg-shade"></span>
+              <!-- <span class="bg-shade"></span> -->
               <!--Logo-->
               <div class="logo-outer">
                 <div class="logo">
@@ -178,7 +215,7 @@
               <!--Nav Box-->
               <div class="nav-outer clearfix">
                 <!--Mobile Navigation Toggler-->
-                <div class="mobile-nav-toggler">
+                <div class="mobile-nav-toggler" style="color: #17423b">
                   <span class="icon"
                     ><span class="line line-one flaticon-minus-symbol"></span
                     ><span class="line line-two flaticon-minus-symbol"></span
@@ -228,29 +265,65 @@
         <!--End Header Upper-->
 
         <!-- Sticky Header  -->
-        <div class="sticky-header">
-          <div class="auto-container clearfix">
-            <!--Logo-->
-            <div class="logo pull-left">
-              <a href="#Home" class="page-scroll"
-                ><img
-                  src="images/logo.webp"
-                  alt="Inspira Tropical Garden Logo"
-                  loading="lazy"
-              /></a>
+        <div class="desktop-header">
+          <!--Logo-->
+          <div class="logo pull-left">
+            <a href="#Home" class="page-scroll"
+              ><img
+                src="images/logo.webp"
+                alt="Inspira Tropical Garden Logo"
+                loading="lazy"
+            /></a>
+          </div>
+          <!--Right Col-->
+          <div class="header-right" style="display: flex">
+            <!-- Main Menu -->
+            <nav class="desktop-nav">
+              <ul class="">
+                <li>
+                  <a href="#Home" class="page-scroll"
+                    ><i class="fas fa-home"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#Highlights" class="page-scroll">HIGHLIGHTS</a>
+                </li>
+                <li>
+                  <a href="#Specifications" class="page-scroll"
+                    >SPECIFICATIONS</a
+                  >
+                </li>
+                <li>
+                  <a href="#Resources" class="page-scroll">RESOURCES</a>
+                </li>
+                <li>
+                  <a href="#Amenities" class="page-scroll">AMENITIES</a>
+                </li>
+                <li>
+                  <a href="#Gallery" class="page-scroll">GALLERY</a>
+                </li>
+                <li><a href="#Map" class="page-scroll">MAP</a></li>
+                <li>
+                  <a href="#Video" class="page-scroll">VIDEO</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="buttonDiv">
+              <div class="callButton">
+                <a href="tel:+9195138-85775"
+                  ><img
+                    src="./images/callIcon.svg"
+                    alt="callIcon"
+                    href="tel:+9195138-85775"
+                    loading="lazy"
+                    height="auto"
+                    width="auto"
+                  />
+                  <span class="phoneNo">95138-85775</span>
+                </a>
+              </div>
             </div>
-            <!--Right Col-->
-            <div class="pull-right">
-              <!-- Main Menu -->
-              <nav class="main-menu">
-                <div class="navbar-collapse show collapse clearfix">
-                  <ul class="navigation clearfix">
-                    <!--Keep This Empty / Menu will come through Javascript-->
-                  </ul>
-                </div>
-              </nav>
-              <!-- Main Menu End-->
-            </div>
+            <!-- Main Menu End-->
           </div>
         </div>
         <!-- End Sticky Menu -->
@@ -287,145 +360,379 @@
         />
       </section>
 
-      <section class="banner-section enquiry-section" id="LeadForm">
-        <div class="banner-carousel owl-carousel owl-theme">
-          <!-- Slide Item -->
-          <div class="slide-item">
-            <div class="content-box">
-              <div class="content">
-                <div class="container mt-1">
-                  <div class="row">
-                    <div class="col-md-7 col-12">
-                      <span class="title mb-5">PRE-LAUNCH</span>
-                      <h2>Premium 2 & 3 BHK Apartments</h2>
-                      <h2>Electronic City</h2>
-                      <h4>
-                        2 BHK - ₹ 74 Lacs<span>*</span>
-                        <span class="firstCapital">Onwards</span>
-                      </h4>
-                      <h4>
-                        3 BHK - ₹ 1.04 Cr<span>*</span>
-                        <span class="firstCapital">Onwards</span>
-                      </h4>
-                    </div>
-                    <div class="col-md-5 col-12">
-                      <h3 class="text-white mb-4 mt-2 font-weight-bold">
-                        ENQUIRE NOW
-                      </h3>
-                      <div class="request-form">
-                        <form
-                          name="bookSiteVisitForm"
-                          class="bookSiteVisitForm"
-                          action="javascript:void(0);"
-                          method="POST"
-                        >
-                          <div class="row">
-                            <div class="col-12 mb-3">
-                              <div class="form-group">
-                                <input
-                                  type="text"
-                                  name="txt_Name"
-                                  id="txt_Name"
-                                  placeholder="Your name"
-                                  required
-                                />
-                              </div>
-                            </div>
-                            <div class="col-12 mb-3">
-                              <div class="form-group">
-                                <input
-                                  type="email"
-                                  name="txt_EmailID"
-                                  id="txt_EmailID"
-                                  placeholder="Email address"
-                                  required
-                                />
-                              </div>
-                            </div>
-                            <div class="col-12 mb-3">
-                              <div class="form-group">
-                                <input
-                                  type="number"
-                                  name="txt_Phone"
-                                  id="txt_Phone"
-                                  placeholder="Phone number"
-                                  required
-                                  maxlength="10"
-                                  oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-12 mb-3 text-right">
-                              <div class="form-group">
-                                <button
-                                  class="theme-btn btn-style-one"
-                                  type="submit"
-                                >
-                                  <span class="btn-title">Submit</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="col-12 text-center">
-                              <span class="bookingStatus"></span>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
+      <section class="section1">
+        <div class="left">
+          <p class="head">
+            2 & 3 BHK <br />
+            LUXURY APARTMENTS
+          </p>
+          <div>
+            <img />
+            <p class="place">ELECTRONIC CITY</p>
+          </div>
+          <p class="config">2 BHK - Rs 74 Lacs* Onwards</p>
+          <p class="config">3 BHK - Rs 1.04 Cr* Onwards</p>
+          <div
+            style="
+              background-color: #d4a160;
+              width: fit-content;
+              padding: 10px 40px;
+              margin-top: 5px;
+              border-radius: 20px;
+              font-size: 15px;
+            "
+          >
+            Possession Date: June 2026
+          </div>
+        </div>
+        <div class="right">
+          <div class="enquiry1">
+            <form
+              class="enquiryMain1"
+              onsubmit="return false"
+              action="javascript:void(0);"
+              method="POST"
+            >
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 600;
+                  color: #fff;
+                  text-align: center;
+                  margin-bottom: 20px;
+                "
+              >
+                ENQUIRE NOW
+              </p>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  align-items: center;
+                "
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  id="name1"
+                  required=""
+                  style="padding: 0 15px"
+                  onchange="checkNew(event,1)"
+                  onkeyup="inputChange1(event)"
+                />
+                <div>
+                  <input
+                    id="phone1"
+                    placeholder="Phone"
+                    type="tel"
+                    maxlength="10"
+                    required
+                    onchange="checkNew(event,1)"
+                    onkeyup="inputChange1(event)"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
+                  />
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  id="email1"
+                  required=""
+                  style="padding: 15px"
+                  onchange="checkNew(event,1)"
+                  onkeyup="inputChange1(event)"
+                />
+              </div>
+              <div
+                class="checkboxWrapper1"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  margin: 10px 0;
+                  width: 280px;
+                "
+              >
+                <input
+                  class="checkbox1"
+                  style="transform: scale(1)"
+                  type="checkbox"
+                  onclick="inputChange1(event)"
+                />
+                <div
+                  class="lessText1"
+                  style="font-size: 11px; color: #fff; margin-left: 10px"
+                >
+                  <span>I hereby declare that I have read...</span
+                  ><span
+                    style="cursor: pointer; font-weight: 800"
+                    onclick="readMore(event,1)"
+                    >Read More</span
+                  >
+                </div>
+                <div class="moreText1" style="color: #fff; margin-left: 7px">
+                  I hereby declare that I have read the consent and I appoint
+                  and allow FINCITY and its Developer partners to call or SMS
+                  and/or WhatsApp with details regarding this project or any
+                  other projects including new launches from time to time in
+                  future, notwithstanding anything to the contrary that may be
+                  contained anywhere, including any registration for DNC/ NDNC.
+                  <span
+                    style="cursor: pointer; font-weight: 800"
+                    class="readLess1"
+                    onclick="readLess(event,1)"
+                    >Read Less</span
+                  >
                 </div>
               </div>
+              <button
+                class="enquirBbutton getInfoBtn1"
+                type="submit"
+                disabled=""
+                onclick="getInfo1(event,1)"
+              >
+                Get More Information
+              </button>
+            </form>
+            <form class="otpVerification1" onsubmit="return false">
+              <p style="color: #fff; font-size: 20px; font-weight: 600">
+                Verification Code
+              </p>
+              <div class="resendText">
+                <span id="numberText1"
+                  >Please Enter the Verification Code <br />
+                  sent to +91</span
+                >
+                <span class="verfication-no2"></span>
+                <span
+                  style="cursor: pointer; color: dodgerblue"
+                  onclick="changePhoneNo1(event,1)"
+                  >Change</span
+                >
+              </div>
+              <div class="verify-otp-container">
+                <input
+                  class="otpInput"
+                  maxlength="1"
+                  id="_1st"
+                  onkeyup="clickEvent(this, '_2nd')"
+                  type="text"
+                  onkeydown="moveFocusBack(event)"
+                />
+                <input
+                  class="otpInput"
+                  maxlength="1"
+                  id="_2nd"
+                  onkeyup="clickEvent(this, '_3rd')"
+                  type="text"
+                  onkeydown="moveFocusBack(event)"
+                />
+                <input
+                  class="otpInput"
+                  maxlength="1"
+                  id="_3rd"
+                  type="text"
+                  onkeyup="clickEvent(this, '_4th')"
+                  onkeydown="moveFocusBack(event)"
+                />
+                <input
+                  class="otpInput"
+                  maxlength="1"
+                  id="_4th"
+                  type="text"
+                  onkeydown="moveFocusBack(event)"
+                />
+              </div>
+              <div
+                style="
+                  width: 100%;
+                  text-align: center;
+                  font-weight: 300;
+                  margin-top: 25px;
+                  cursor: pointer;
+                "
+              >
+                Didn't receive OTP?
+              </div>
+              <div
+                style="
+                  width: 100%;
+                  text-align: center;
+                  font-weight: 600;
+                  margin-top: 10px;
+                  cursor: pointer;
+                "
+                onclick="sendOtp()"
+              >
+                Resend OTP
+              </div>
+              <button
+                style="
+                  border: none;
+                  width: 100%;
+                  border-radius: 40px;
+                  height: 40px;
+                  width: 280px;
+                  margin-top: 15px;
+                  background-color: #d4a160;
+                "
+                class="verify-btn"
+                onclick="verifyOtp(event,1)"
+              >
+                Verify
+              </button>
+            </form>
+            <div class="location1" onsubmit="return false">
+              <div class="locationText">
+                <p style="text-align: center" class="ThankYou">Thank You!</p>
+                <p style="text-align: center" id="serveBetter">
+                  To Serve you better
+                </p>
+                <p style="text-align: center" class="shareLocation">
+                  Please Share your Location
+                </p>
+              </div>
+              <button
+                style="
+                  display: flex;
+                  border-radius: 20px;
+                  background-color: #d4a160;
+                  padding: 0 40px;
+                  align-items: center;
+                  gap: 10px;
+                  margin-top: 10px;
+                "
+                class="locationButton2"
+                type="submit"
+                onclick="detectLocation(event, 1)"
+              >
+                <p style="font-size: 16px; color: #fff" class="detectText">
+                  Detect My Location
+                </p>
+                <img
+                  width="20px"
+                  height="20px"
+                  loading="lazy"
+                  src="./images/focus.svg"
+                  alt="located"
+                  class="detect"
+                  id="detect1"
+                />
+              </button>
+              <div
+                style="font-size: 14px; margin-top: 10px; color: #fff"
+                class="detected1"
+              ></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="about-section-two">
-        <div class="auto-container">
-          <div class="row clearfix">
-            <!-- Image Column -->
-            <div class="image-column col-lg-4 col-md-4 col-sm-12">
-              <div class="inner-column wow fadeInLeft">
-                <div class="image-box">
-                  <figure class="image wow fadeInRight">
-                    <a href="images/about_v3.webp" class="lightbox-image 1"
-                      ><img
-                        src="images/about_v3.webp"
-                        alt="Apartments in Electronic city"
-                        loading="lazy"
-                    /></a>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <!-- Content Column -->
-            <div class="content-column col-lg-8 col-md-8 col-sm-12">
-              <div class="inner-column wow fadeInRight">
-                <div class="sec-title wow fadeInLeft">
-                  <!-- <span class="title">learn about apartment</span> -->
-                  <h2>Apartments in Electronic city</h2>
-                </div>
-                <div class="text">
-                  <p class="text-justify">
-                    Inspira Tropical Garden is strategically located in Huskur
-                    road, Electronic city phase 2. This is the area that has
-                    seen increased connectivity over time. Apartments in
-                    Electronic city an iconic project from Inspira builders,
-                    Inspira Tropical Garden proves to be a much-coveted
-                    residential destination, offering 2 bhk in electronic city a
-                    lifestyle that serves as a perfect abode in the lap of
-                    nature for the home seekers. flats in Bangalore located
-                    amidst the thick green trees and sprawling lawns, It offers
-                    a residence that is par excellence, not only in its design &
-                    planning but also in the abundant presence of nature.
-                  </p>
-                  <p class="text-dark font-weight-bold">
-                    RERA: PRM/KA/RERA/1251/308/PR/071122/005416
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section class="section2">
+        <img
+          loading="lazy"
+          style="height: 500px"
+          src="./images/ArielElivation.webp"
+        />
+        <img
+          style="
+            position: absolute;
+            right: 0;
+            top: 0px;
+            height: 650px;
+            z-index: 0;
+          "
+          src="./images/Subtraction 1.svg"
+        />
+        <div
+          style="z-index: 2; position: absolute; right: 13%; padding-top: 60px"
+        >
+          <img style="width: 300px" src="./images/heart.png" />
+          <p
+            style="
+              line-height: 1.5;
+              font-size: 14px;
+              color: #fff;
+              margin-top: 20px;
+            "
+          >
+            Inspira Tropical Garden is strategically located in Huskur road,<br />
+            Electronic city phase 2. This is the area that has seen increased<br />
+            connectivity over time. Apartments in Electronic city an iconic<br />
+            project from Inspira builders, Inspira Tropical Garden proves to
+            be<br />
+            a much-coveted residential destination,
+          </p>
+          <p
+            style="
+              font-size: 18px;
+              color: #fff;
+              font-weight: 600;
+              margin-top: 15px;
+            "
+          >
+            70% Open Space | 3 Sides Open
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              color: #fff;
+              margin-top: 15px;
+              font-weight: 600;
+            "
+          >
+            RERA: PRM/KA/RERA/1251/308/PR/071122/005416
+          </p>
+        </div>
+      </section>
+      <section style="height: 580px" class="section2-mobile">
+        <img src="./images/MaskGroup.webp" />
+        <img
+          style="
+            position: absolute;
+            bottom: 0;
+            left: 1px;
+            transform: scale(1.02);
+          "
+          src="./images/Union1.svg"
+        />
+        <div style="position: absolute; z-index: 1; padding: 0 0 0 35px">
+          <img style="width: 200px" src="./images/heart.png" />
+          <p
+            style="
+              line-height: 1.4;
+              font-size: 16px;
+              margin-top: 20px;
+              color: #fff;
+            "
+          >
+            Inspira Tropical Garden is strategically<br />
+            located in Huskur road, Electronic city<br />
+            phase 2. This is the area that has seen <br />
+            increased connectivity over time.
+          </p>
+          <p
+            style="
+              line-height: 1.4;
+              font-size: 18px;
+              font-weight: 600;
+              margin-top: 20px;
+              color: #fff;
+            "
+          >
+            70% Open Space | 3 Sides Open
+          </p>
+          <p
+            style="
+              font-size: 12px;
+              color: #fff;
+              margin-top: 17px;
+              font-weight: 600;
+            "
+          >
+            RERA: PRM/KA/RERA/1251/308/PR/071122/005416
+          </p>
         </div>
       </section>
 
@@ -710,6 +1017,57 @@
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="floor-plan">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <img
+                  class="d-block"
+                  width="800px"
+                  height="100px"
+                  loading="lazy"
+                  src="https://lifebythelake.in/asset/2-jpg.webp"
+                  alt="First slide"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block"
+                width="800px"
+                height="100px"
+                loading="lazy"
+                src="https://lifebythelake.in/asset/Actual-Lake-Shots-3-min-jpg.webp"
+                alt="Second slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block"
+                width="800px"
+                height="100px"
+                loading="lazy"
+                src="https://lifebythelake.in/asset/Actual-Lake-Shots-8-min-jpg.webp"
+                alt="Third slide"
+              />
             </div>
           </div>
         </div>
@@ -1263,7 +1621,7 @@
                   today
                 </h2>
                 <span class="number"
-                  ><a href="tel:+917026170262">+91-7026170262</a></span
+                  ><a href="tel:+919513885775">+91-9513885775</a></span
                 >
               </div>
               <div class="btn-box wow fadeInUp text-left">
@@ -1279,13 +1637,13 @@
                 class="w-100 mb-3"
                 height="400"
                 loading="lazy"
-                src="https://www.youtube.com/embed/go2IXhA711U"
+                src="https://www.youtube.com/embed/go2IXhA711U?playlist=go2IXhA711U&loop=1&rel=0"
                 title="Inspira Tropical Garden | Premium 2 & 3 BHK Apartments | Electronic City | #InspiraBuilders"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <a
+              <!-- <a
                 href="https://www.inspirabuilders.com/tropicalgarden/interiorvirtualtour/"
                 target="_blank"
                 class="theme-btn btn-style-two mx-2"
@@ -1296,7 +1654,7 @@
                 target="_blank"
                 class="theme-btn btn-style-two mx-2"
                 ><span class="btn-title">View Tropical Exterior</span></a
-              >
+              > -->
             </div>
           </div>
         </div>
@@ -1316,15 +1674,11 @@
         <div
           class="modal-dialog modal-dialog-centered modal-xl"
           role="document"
+          style="justify-content: center"
         >
           <div class="modal-content">
             <div class="modal-header">
-              <h5
-                class="modal-title text-uppercase font-weight-bold text-dark"
-                id="DownloadFormModalTitle"
-              >
-                Submit Your Details to Download Brochure & Floor Plan
-              </h5>
+              <img class="modal-image" src="./images/ModalImage.webp" />
               <button
                 type="button"
                 class="close"
@@ -1334,474 +1688,568 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              <div class="request-form pt-4" id="downloadBFP">
-                <form
-                  name="downloadBFPForm"
-                  id="downloadBFPForm"
-                  class="downloadBFPForm"
-                  action="javascript:void(0);"
-                  method="POST"
+            <div
+              class="enquiry2"
+              style="background-color: #203835; border-radius: 0 0 28px 28px"
+            >
+              <form
+                class="enquiryMain2"
+                onsubmit="return false"
+                action="javascript:void(0);"
+                method="POST"
+              >
+                <p
+                  style="
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #fff;
+                    text-align: center;
+                    margin: 15px 0;
+                  "
                 >
-                  <div class="row">
-                    <div class="col-12 mb-3">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          name="txt_Name"
-                          id="txt_Name"
-                          placeholder="Your name"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-12 mb-3">
-                      <div class="form-group">
-                        <input
-                          type="email"
-                          name="txt_EmailID"
-                          id="txt_EmailID"
-                          placeholder="Email address"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-12 mb-3">
-                      <div class="form-group">
-                        <input
-                          type="number"
-                          name="txt_Phone"
-                          id="txt_Phone"
-                          placeholder="Phone number"
-                          maxlength="10"
-                          required
-                          oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-12 mb-3 text-right">
-                      <div class="form-group">
-                        <button class="theme-btn btn-style-one" type="submit">
-                          <span class="btn-title">Submit</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-12 text-center">
-                      <span class="downloadBFPStatus"></span>
-                    </div>
-                  </div>
-                </form>
-                <form
-                  class="downloadBFPForm"
-                  id="otpVerification"
-                  onsubmit="return false"
-                >
-                  <div
-                    class="d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <div class="resendText py-3">
-                      <span id="numberText"
-                        >Please Enter the Verification Code sent to</span
-                      >
-                      <span class="changeLink" onclick="backMain(event, true)"
-                        >Change</span
-                      >
-                    </div>
-                    <div class="py-3 w-100 d-flex justify-content-center">
-                      <div class="row">
-                        <div class="px-2">
-                          <input
-                            class="otpInput"
-                            maxlength="1"
-                            id="_1st"
-                            onkeyup="clickEvent(this, '_2nd')"
-                            type="text"
-                            onkeydown="moveFocusBack(event)"
-                          />
-                        </div>
-                        <div class="px-2">
-                          <input
-                            class="otpInput"
-                            maxlength="1"
-                            id="_2nd"
-                            onkeyup="clickEvent(this, '_3rd')"
-                            type="text"
-                            onkeydown="moveFocusBack(event, '_1st')"
-                          />
-                        </div>
-                        <div class="px-2">
-                          <input
-                            class="otpInput"
-                            maxlength="1"
-                            id="_3rd"
-                            type="text"
-                            onkeyup="clickEvent(this, '_4th')"
-                            onkeydown="moveFocusBack(event, '_2nd')"
-                          />
-                        </div>
-                        <div class="px-2">
-                          <input
-                            class="otpInput"
-                            maxlength="1"
-                            id="_4th"
-                            type="text"
-                            onkeydown="moveFocusBack(event, '_3rd')"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="boxWrapper py-3 text-center">
-                      <p>Don't receive OTP?</p>
-                      <p onclick="resendOtp(event)" id="resendOtp">
-                        Resend OTP
-                      </p>
-                    </div>
-                    <div class="py-3 form-group">
-                      <button
-                        class="theme-btn btn-style-one"
-                        id="otpBbutton1"
-                        type="submit"
-                        onclick="verfiyOtp(event, true)"
-                      >
-                        Verify
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                  ENQUIRE NOW
+                </p>
                 <div
-                  class="downloadBFPForm"
-                  id="location"
-                  onsubmit="return false"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center;
+                  "
                 >
-                  <div
-                    class="d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <div class="headerModal">
-                      <lottie-player
-                        title="marker"
-                        background="transparent"
-                        src="images/marker-lottie.json"
-                        speed="1"
-                        style="width: 150px; height: 150px"
-                        autoplay
-                        loop
-                      ></lottie-player>
-                    </div>
-                    <div class="consentText">
-                      <p class="ThankYou">Thank You!</p>
-                      <p id="serveBetter">To Serve you better</p>
-                      <p class="shareLocation">Please Share your Location</p>
-                    </div>
-                    <div class="py-3 form-group">
-                      <button
-                        class="theme-btn btn-style-one d-flex justify-content-center align-items-center"
-                        id="locationButton"
-                        type="submit"
-                        onclick="detectLocation(event)"
-                      >
-                        <p class="detectText text-white" id="detectText">
-                          Detect My Location
-                        </p>
-                        <img
-                          src="images/focus.svg"
-                          alt="located"
-                          class="detect pl-1"
-                          id="detect"
-                        />
-                        <lottie-player
-                          class="loading"
-                          id="loading"
-                          src="images/loading.json"
-                          background="transparent"
-                          speed="1"
-                          autoplay
-                          loop
-                          style="width: 50px; height: 50px"
-                        ></lottie-player>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="downloadBFPSuccess" class="d-none">
-                <div class="row">
-                  <div class="col-12 text-center my-4">
-                    <img
-                      src="images/thankyou.svg"
-                      class="w-25 img-fluid my-4"
-                      alt="Thank You"
-                      loading="lazy"
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    id="name2"
+                    required=""
+                    style="padding: 0 15px"
+                    onchange="checkNew(event,2)"
+                    onkeyup="inputChange2(event)"
+                  />
+                  <div>
+                    <input
+                      id="phone2"
+                      placeholder="Phone"
+                      type="tel"
+                      maxlength="10"
+                      required
+                      onchange="checkNew(event,2)"
+                      onkeyup="inputChange2(event)"
+                      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
                     />
-                    <h6 class="text-success text-uppercase font-weight-bold">
-                      Thank You!!<br />
-                      Details Submitted Successfully
-                    </h6>
-                    <p class="my-3">
-                      You can download the Brochure & Floor Plan.
-                    </p>
-                    <a
-                      href="pdf/TG_Brochure.pdf"
-                      target="_blank"
-                      class="mb-3 btn btn-warning"
-                      ><i class="far fa-file-pdf mr-2"></i>Download Brochure</a
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    id="email2"
+                    required=""
+                    style="padding: 15px"
+                    onchange="checkNew(event,2)"
+                    onkeyup="inputChange2(event)"
+                  />
+                </div>
+                <div
+                  class="checkboxWrapper2"
+                  style="
+                    display: flex;
+                    margin: 10px 0;
+                    justify-content: center;
+                    padding: 0 25px;
+                  "
+                >
+                  <input
+                    class="checkbox2"
+                    style="transform: scale(1)"
+                    type="checkbox"
+                    onclick="inputChange2(event)"
+                  />
+                  <div
+                    class="lessText2"
+                    style="font-size: 10px; color: #fff; margin-left: 10px"
+                  >
+                    <span>I hereby declare that I have read...</span
+                    ><span
+                      style="cursor: pointer; font-weight: 800"
+                      onclick="readMore(event,2)"
+                      >Read More</span
                     >
-                    <a
-                      href="pdf/TG_Floor_Plan.pdf"
-                      target="_blank"
-                      class="mb-3 btn btn-dark"
-                      ><i class="far fa-file-pdf mr-2"></i>Download Floor
-                      Plan</a
+                  </div>
+                  <div
+                    class="moreText2"
+                    style="color: #fff; margin-left: 7px; font-size: 9px"
+                  >
+                    I hereby declare that I have read the consent and I appoint
+                    and allow FINCITY and its Developer partners to call or SMS
+                    and/or WhatsApp with details regarding this project or any
+                    other projects including new launches from time to time in
+                    future, notwithstanding anything to the contrary that may be
+                    contained anywhere, including any registration for DNC/
+                    NDNC.
+                    <span
+                      style="cursor: pointer; font-weight: 800; font-size: 10px"
+                      class="readLess2"
+                      onclick="readLess(event,2)"
+                      >Read Less</span
                     >
                   </div>
                 </div>
+                <button
+                  class="enquirBbutton getInfoBtn2"
+                  type="submit"
+                  disabled=""
+                  onclick="getInfo1(event,2)"
+                >
+                  Get More Information
+                </button>
+              </form>
+              <form class="otpVerification2" onsubmit="return false">
+                <p style="color: #fff; font-size: 20px; font-weight: 600">
+                  Verification Code
+                </p>
+                <div class="resendText">
+                  <span id="numberText1"
+                    >Please Enter the Verification Code <br />
+                    sent to +91</span
+                  >
+                  <span class="verfication-no3"></span>
+                  <span
+                    style="cursor: pointer; color: dodgerblue"
+                    onclick="changePhoneNo1(event,2)"
+                    >Change</span
+                  >
+                </div>
+                <div class="verify-otp-container">
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_1st_"
+                    onkeyup="clickEvent(this, '_2nd_')"
+                    type="text"
+                    onkeydown="moveFocusBack(event)"
+                  />
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_2nd_"
+                    onkeyup="clickEvent(this, '_3rd_')"
+                    type="text"
+                    onkeydown="moveFocusBack(event)"
+                  />
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_3rd_"
+                    type="text"
+                    onkeyup="clickEvent(this, '_4th_')"
+                    onkeydown="moveFocusBack(event)"
+                  />
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_4th_"
+                    type="text"
+                    onkeydown="moveFocusBack(event)"
+                  />
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 300;
+                    margin-top: 25px;
+                    cursor: pointer;
+                  "
+                >
+                  Didn't receive OTP?
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 600;
+                    margin-top: 10px;
+                    cursor: pointer;
+                  "
+                  onclick="sendOtp()"
+                >
+                  Resend OTP
+                </div>
+                <button
+                  style="
+                    border: none;
+                    width: 100%;
+                    border-radius: 40px;
+                    height: 40px;
+                    width: 280px;
+                    margin-top: 15px;
+                    background-color: #d4a160;
+                  "
+                  class="verify-btn"
+                  onclick="verifyOtp(event,2)"
+                >
+                  Verify
+                </button>
+              </form>
+              <div class="location2" onsubmit="return false">
+                <div class="locationText">
+                  <p style="text-align: center" class="ThankYou">Thank You!</p>
+                  <p style="text-align: center" id="serveBetter">
+                    To Serve you better
+                  </p>
+                  <p style="text-align: center" class="shareLocation">
+                    Please Share your Location
+                  </p>
+                </div>
+                <button
+                  style="
+                    display: flex;
+                    border-radius: 20px;
+                    background-color: #d4a160;
+                    padding: 0 40px;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 10px;
+                  "
+                  class="locationButton2"
+                  type="submit"
+                  onclick="detectLocation(event, 2)"
+                >
+                  <p style="font-size: 16px; color: #fff" class="detectText">
+                    Detect My Location
+                  </p>
+                  <img
+                    width="20px"
+                    height="20px"
+                    loading="lazy"
+                    src="./images/focus.svg"
+                    alt="located"
+                    class="detect"
+                    id="detect1"
+                  />
+                </button>
+                <div
+                  style="font-size: 14px; margin-top: 10px; color: #fff"
+                  class="detected2"
+                ></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Download Form Modal End -->
-      <footer class="main-footer" id="FooterForm" class="bookVisitForm">
-        <div class="auto-container">
-          <!--Widgets Section-->
-          <div class="widgets-section">
-            <div class="row clearfix">
-              <!--big column-->
-              <div class="big-column col-sm-12">
-                <div class="row clearfix">
-                  <!--Footer Column-->
-                  <div class="footer-column col-lg-12 col-md-12 col-sm-12">
-                    <div class="footer-widget form-widget">
-                      <div class="request-form">
-                        <div class="sec-title">
-                          <!-- <span class="title">villa plan</span> -->
-                          <h2
-                            class="text-white text-center"
-                            id="bookSiteVisitFormTitle"
-                          >
-                            Enquiry Now
-                          </h2>
-                        </div>
-                        <form
-                          name="bookSiteVisitForm"
-                          id="bookSiteVisitForm"
-                          class="bookSiteVisitForm"
-                          action="javascript:void(0);"
-                          method="POST"
-                        >
-                          <div class="row">
-                            <div class="col-md-4 col-sm-6 col-12 mb-3">
-                              <div class="form-group">
-                                <input
-                                  type="text"
-                                  name="txt_Name"
-                                  id="txt_Name"
-                                  placeholder="Your name"
-                                  required
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12 mb-3">
-                              <div class="form-group">
-                                <input
-                                  type="email"
-                                  name="txt_EmailID"
-                                  id="txt_EmailID"
-                                  placeholder="Email address"
-                                  required
-                                />
-                              </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12 mb-3">
-                              <div class="form-group">
-                                <input
-                                  type="number"
-                                  name="txt_Phone"
-                                  id="txt_Phone"
-                                  placeholder="Phone number"
-                                  required
-                                  maxlength="10"
-                                  oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-12 mb-3 text-right">
-                              <div class="form-group">
-                                <button
-                                  class="theme-btn btn-style-one"
-                                  type="submit"
-                                >
-                                  <span class="btn-title">Submit</span>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="col-12 text-center">
-                              <span class="bookingStatus"></span>
-                            </div>
-                          </div>
-                        </form>
-                        <form
-                          class="bookSiteVisitForm"
-                          id="otpVerification"
-                          onsubmit="return false"
-                        >
-                          <div
-                            class="d-flex flex-column justify-content-center align-items-center"
-                          >
-                            <div class="resendText py-3 text-light">
-                              <span id="numberText"
-                                >Please Enter the Verification Code sent
-                                to</span
-                              >
-                              <span
-                                class="changeLink"
-                                onclick="backMain(event, false)"
-                                >Change</span
-                              >
-                            </div>
-                            <div
-                              class="py-3 w-100 d-flex justify-content-center"
-                            >
-                              <div class="row">
-                                <div class="px-2">
-                                  <input
-                                    class="otpInput"
-                                    maxlength="1"
-                                    id="_1st_"
-                                    onkeyup="clickEvent(this, '_2nd_')"
-                                    type="text"
-                                    onkeydown="moveFocusBack(event)"
-                                  />
-                                </div>
-                                <div class="px-2">
-                                  <input
-                                    class="otpInput"
-                                    maxlength="1"
-                                    id="_2nd_"
-                                    onkeyup="clickEvent(this, '_3rd_')"
-                                    type="text"
-                                    onkeydown="moveFocusBack(event, '_1st_')"
-                                  />
-                                </div>
-                                <div class="px-2">
-                                  <input
-                                    class="otpInput"
-                                    maxlength="1"
-                                    id="_3rd_"
-                                    type="text"
-                                    onkeyup="clickEvent(this, '_4th_')"
-                                    onkeydown="moveFocusBack(event, '_2nd_')"
-                                  />
-                                </div>
-                                <div class="px-2">
-                                  <input
-                                    class="otpInput"
-                                    maxlength="1"
-                                    id="_4th_"
-                                    type="text"
-                                    onkeydown="moveFocusBack(event, '_3rd_')"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <div class="boxWrapper py-3 text-center">
-                              <p class="text-light">Don't receive OTP?</p>
-                              <p
-                                onclick="resendOtp(event)"
-                                id="resendOtp"
-                                class="text-light"
-                              >
-                                Resend OTP
-                              </p>
-                            </div>
-                            <div class="py-3 form-group">
-                              <button
-                                class="theme-btn btn-style-one"
-                                id="otpBbutton1"
-                                type="submit"
-                                onclick="verfiyOtp(event, false)"
-                              >
-                                Verify
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <div
-                          class="bookSiteVisitForm"
-                          id="location"
-                          onsubmit="return false"
-                        >
-                          <div
-                            class="d-flex flex-column justify-content-center align-items-center"
-                          >
-                            <div class="headerModal">
-                              <lottie-player
-                                title="marker"
-                                background="transparent"
-                                src="images/marker-lottie.json"
-                                speed="1"
-                                style="width: 150px; height: 150px"
-                                autoplay
-                                loop
-                              ></lottie-player>
-                            </div>
-                            <div class="consentText">
-                              <p class="ThankYou text-light">Thank You!</p>
-                              <p id="serveBetter">To Serve you better</p>
-                              <p class="shareLocation">
-                                Please Share your Location
-                              </p>
-                            </div>
-                            <div class="py-3 form-group">
-                              <button
-                                class="theme-btn btn-style-one d-flex justify-content-center align-items-center"
-                                id="locationButton"
-                                type="submit"
-                                onclick="detectLocation(event)"
-                              >
-                                <p
-                                  class="detectText text-light"
-                                  id="detectText"
-                                >
-                                  Detect My Location
-                                </p>
-                                <img
-                                  src="images/focus.svg"
-                                  alt="located"
-                                  class="detect pl-1"
-                                  id="detect"
-                                />
-                                <lottie-player
-                                  class="loading"
-                                  id="loading"
-                                  src="images/loading.json"
-                                  background="transparent"
-                                  speed="1"
-                                  autoplay
-                                  loop
-                                  style="width: 50px; height: 50px"
-                                ></lottie-player>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+      <div class="enquiry" id="FooterForm">
+        <form
+          class="enquiryMain"
+          id="enquiryMain"
+          onsubmit="return false"
+          action="javascript:void(0);"
+          method="POST"
+        >
+          <p
+            style="
+              font-size: 20px;
+              font-weight: 600;
+              color: #fff;
+              text-align: center;
+            "
+            class="headerText"
+          >
+            ENQUIRE NOW
+          </p>
+          <div
+            style="display: flex; gap: 25px; align-items: center"
+            class="enquirySubMain"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              id="name"
+              required=""
+              style="padding: 0 15px"
+              onchange="checkNew(event,3)"
+              onkeyup="inputChange3(event)"
+            />
+            <div>
+              <input
+                id="phone"
+                placeholder="Phone"
+                type="tel"
+                maxlength="10"
+                required
+                onchange="checkNew(event,3)"
+                onkeyup="inputChange3(event)"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              id="email"
+              required=""
+              onchange="checkNew(event,3)"
+              onkeyup="inputChange3(event)"
+            />
+          </div>
+          <div class="checkboxWrapper">
+            <input
+              class="checkbox"
+              type="checkbox"
+              onclick="inputChange3(event)"
+            />
+            <div class="lessText">
+              <span>I hereby declare that I have read the consent...</span
+              ><span
+                style="cursor: pointer; font-weight: 800"
+                onclick="readMore(event,3)"
+                >Read More</span
+              >
+            </div>
+            <div class="moreText">
+              I hereby declare that I have read the consent and I appoint and
+              allow FINCITY and its Developer partners to call or SMS and/or
+              WhatsApp with details regarding this project or any other projects
+              including new launches from time to time in future,
+              notwithstanding anything to the contrary that may be contained
+              anywhere, including any registration for DNC/ NDNC.
+              <span
+                style="cursor: pointer; font-weight: 800"
+                id="readLess"
+                onclick="readLess(event,3)"
+                >Read Less</span
+              >
             </div>
           </div>
+          <button
+            class="enquirBbutton getInfoBtn"
+            type="submit"
+            disabled=""
+            onclick="getInfo1(event,3)"
+          >
+            Get More Information
+          </button>
+        </form>
+        <form class="otpVerification" onsubmit="return false">
+          <p
+            style="color: #fff; font-size: 20px; font-weight: 600"
+            class="headerText"
+          >
+            <span>Verification Code</span>
+          </p>
+          <div class="resendText">
+            <span id="numberText1"
+              >Please Enter the Verification Code <br />
+              sent to +91</span
+            >
+            <span class="verfication-no"></span>
+            <span
+              style="cursor: pointer; color: dodgerblue"
+              class="changeLink"
+              onclick="changePhoneNo1(event,3)"
+              >Change</span
+            >
+          </div>
+          <div class="verify-otp-container">
+            <input
+              class="otpInput"
+              maxlength="1"
+              id="__1st"
+              onkeyup="clickEvent(this, '__2nd')"
+              type="text"
+              onkeydown="moveFocusBack(event)"
+            />
+            <input
+              class="otpInput"
+              maxlength="1"
+              id="__2nd"
+              onkeyup="clickEvent(this, '__3rd')"
+              type="text"
+              onkeydown="moveFocusBack(event)"
+            />
+            <input
+              class="otpInput"
+              maxlength="1"
+              id="__3rd"
+              type="text"
+              onkeyup="clickEvent(this, '__4th')"
+              onkeydown="moveFocusBack(event)"
+            />
+            <input
+              class="otpInput"
+              maxlength="1"
+              id="__4th"
+              type="text"
+              onkeydown="moveFocusBack(event)"
+            />
+          </div>
+          <div
+            style="
+              width: 100%;
+              text-align: center;
+              font-weight: 300;
+              margin-top: 25px;
+              cursor: pointer;
+            "
+          >
+            Didn't receive OTP?
+          </div>
+          <div
+            style="
+              width: 100%;
+              text-align: center;
+              font-weight: 600;
+              margin-top: 10px;
+              cursor: pointer;
+            "
+            onclick="sendOtp()"
+          >
+            Resend OTP
+          </div>
+          <button
+            class="verify-btn"
+            style="
+              border: none;
+              width: 100%;
+              border-radius: 40px;
+              height: 40px;
+              width: 280px;
+              margin-top: 15px;
+              background-color: #d4a160;
+            "
+            onclick="verifyOtp(event,3)"
+          >
+            Verify
+          </button>
+        </form>
+        <div class="location" onsubmit="return false">
+          <div class="locationText">
+            <p style="text-align: center" class="ThankYou">Thank You!</p>
+            <p style="text-align: center" id="serveBetter">
+              To Serve you better
+            </p>
+            <p style="text-align: center" class="shareLocation">
+              Please Share your Location
+            </p>
+          </div>
+          <button
+            class="locationButton"
+            type="submit"
+            onclick="detectLocation(event, 3)"
+          >
+            <p style="font-size: 16px; color: #fff" class="detectText">
+              Detect My Location
+            </p>
+            <img
+              width="24px"
+              height="24px"
+              loading="lazy"
+              src="./images/focus.svg"
+              alt="located"
+              class="detect"
+              id="detect1"
+            />
+          </button>
+          <div
+            style="font-size: 14px; margin-top: 10px; color: #fff"
+            class="detected"
+          ></div>
         </div>
-        <!-- Footer Bottom -->
-      </footer>
+      </div>
     </div>
     <!--End pagewrapper-->
 
     <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target="html">
-      <span class="fa fa-angle-up"></span>
-    </div>
+    <!-- <div class="scroll-to-top scroll-to-target" data-target="html">
+      <a><span class="fa fa-angle-up"></span></a>
+    </div> -->
     <!--Scroll to top-->
+
+    <script>
+      var input2 = document.querySelector("#phone");
+      var iti2 = window.intlTelInput(input2, {
+        onlyCountries: [
+          "in",
+          "au",
+          "bt",
+          "br",
+          "ca",
+          "cn",
+          "de",
+          "hk",
+          "it",
+          "jp",
+          "kw",
+          "my",
+          "mv",
+          "np",
+          "QA",
+          "sa",
+          "sg",
+          "lk",
+          "th",
+          "ae",
+        ],
+        preferredCountries: ["in"],
+        separateDialCode: true,
+      });
+      var input1 = document.querySelector("#phone1");
+      var iti1 = window.intlTelInput(input1, {
+        onlyCountries: [
+          "in",
+          "au",
+          "bt",
+          "br",
+          "ca",
+          "cn",
+          "de",
+          "hk",
+          "it",
+          "jp",
+          "kw",
+          "my",
+          "mv",
+          "np",
+          "QA",
+          "sa",
+          "sg",
+          "lk",
+          "th",
+          "ae",
+        ],
+        preferredCountries: ["in"],
+        separateDialCode: true,
+      });
+      var input3 = document.querySelector("#phone2");
+      var iti3 = window.intlTelInput(input3, {
+        onlyCountries: [
+          "in",
+          "au",
+          "bt",
+          "br",
+          "ca",
+          "cn",
+          "de",
+          "hk",
+          "it",
+          "jp",
+          "kw",
+          "my",
+          "mv",
+          "np",
+          "QA",
+          "sa",
+          "sg",
+          "lk",
+          "th",
+          "ae",
+        ],
+        preferredCountries: ["in"],
+        separateDialCode: true,
+      });
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -1814,7 +2262,12 @@
       defer
       src=" https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
     ></script>
-    <script defer src="js/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script defer>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        compact: false,
+      });
+    </script>
     <script defer src="js/mixitup.min.js"></script>
     <script defer src="js/appear.min.js"></script>
     <script defer src="js/owl.min.js"></script>
@@ -1822,12 +2275,15 @@
     <script defer src="js/scrollbar.min.js"></script>
     <script defer src="js/script.min.js"></script>
     <script defer src="js/form-script.min.js"></script>
-    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+    ></script>
     <script
       defer
       src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
     ></script>
-    <script defer src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 
     <script defer>
       $("a.page-scroll").bind("click", function (event) {
@@ -1839,7 +2295,7 @@
               scrollTop: $($anchor.attr("href")).offset().top - 85,
             },
             500,
-            "linear",
+            "linear"
           );
         event.preventDefault();
       });
