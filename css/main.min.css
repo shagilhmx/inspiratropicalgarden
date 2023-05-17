@@ -513,6 +513,18 @@
     gap: 10px;
     margin-top: 10px;
 }
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    color: #919191;
+    font-size: 12px;
+}
 .locationText p{
     color: #fff;
 }
@@ -529,6 +541,16 @@
 @media(max-width: 767px){
     .desktop-header{
         display: none;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 6px;
+        padding-left: 20px;
+        font-size: 10px;
+    }
+
+    .footer p {
+        margin: 0px;
     }
     .phoneCall {
         background-color: #17423b;
