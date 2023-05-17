@@ -75,6 +75,18 @@
     letter-spacing: .1em;
     transition: all .3s ease;
 }
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    color: #919191;
+    font-size: 12px;
+}
 .desktop-nav ul li a:hover{
     font-weight: 700;
     color: #000;
@@ -512,18 +524,6 @@
     align-items: center;
     gap: 10px;
     margin-top: 10px;
-}
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: white;
-    width: 100%;
-    text-align: left;
-    color: #919191;
-    font-size: 12px;
 }
 .locationText p{
     color: #fff;
