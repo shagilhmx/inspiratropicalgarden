@@ -85,6 +85,9 @@
     width: 100%;
     text-align: left;
     color: #919191;
+}
+
+.footer p {
     font-size: 12px !important;
 }
 .desktop-nav ul li a:hover{
